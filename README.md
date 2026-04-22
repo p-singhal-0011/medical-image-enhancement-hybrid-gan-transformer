@@ -38,8 +38,7 @@ utils/       # Preprocessing & postprocessing
 static/      # Uploads & outputs
 templates/   # Frontend UI
 app.py       # Flask backend
-
----
+```
 ▶️ Run Locally
 # Install dependencies
 pip install -r requirements.txt
@@ -48,16 +47,16 @@ pip install -r requirements.txt
 python app.py
 
 # Open in your browser:
+```
 http://127.0.0.1:5000
+```
 
----
 📌 Future Improvements
 Add PSNR / SSIM evaluation metrics
 Deploy on cloud platforms (Render / Railway)
 Improve UI/UX
 Support batch processing
 
----
 👨‍💻 Author
 
 Priyansh Singhal
