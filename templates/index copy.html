@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Image Enhancement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🩺 Medical Image Enhancement</h1>
+    <p class="subtitle">
+        AI-powered enhancement using Hybrid GAN + Transformer
+    </p>
+
+    <form method="POST" action="/predict" enctype="multipart/form-data" class="upload-box">
+        <input type="file" name="image" id="fileInput" accept="image/*" required hidden>
+
+        <label for="fileInput" class="file-label">
+            📂 Choose Medical Image
+        </label>
+
+        <div id="preview-box" style="display:none;">
+            <p>Selected Image Preview</p>
+            <img id="preview" style="max-width:220px; border-radius:8px;">
+        </div>
+
+        <button type="submit" class="btn-enhance">
+            🚀 Enhance Image
+        </button>
+    </form>
+
+    {% if output_image %}
+    <div class="results">
+        <div class="card">
+            <h3>Original Image</h3>
+            <img src="{{ input_image }}" alt="Original Image">
+        </div>
+
+        <div class="card">
+            <h3>Enhanced Image</h3>
+            <img src="{{ output_image }}" alt="Enhanced Image">
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<footer>
+    <p>© Hybrid GAN–Transformer | Medical AI Project</p>
+</footer>
+
+<script>
+document.getElementById("fileInput").addEventListener("change", function(e){
+    const file = e.target.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(){
+            document.getElementById("preview").src = reader.result;
+            document.getElementById("preview-box").style.display = "block";
+        }
+        reader.readAsDataURL(file);
+    }
+});
+</script>
+
+</body>
+</html>

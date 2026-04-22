@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Image Enhancement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🩺 Medical Image Enhancement</h1>
+    <p class="subtitle">
+        AI-powered enhancement using Hybrid GAN + Transformer
+    </p>
+
+    <form method="POST" enctype="multipart/form-data" class="upload-box">
+        <input type="file" name="image" id="fileInput" required hidden>
+        <label for="fileInput" class="file-label">
+            📂 Choose Medical Image
+        </label>
+
+        <button type="submit" class="btn-enhance">
+            🚀 Enhance Image
+        </button>
+    </form>
+
+    {% if output_image %}
+    <div class="results">
+        <div class="card">
+            <h3>Original Image</h3>
+            <img src="{{ input_image }}">
+        </div>
+
+        <div class="card">
+            <h3>Enhanced Image</h3>
+            <img src="{{ output_image }}">
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<footer>
+    <p>© Hybrid GAN–Transformer | Medical AI Project</p>
+</footer>
+
+</body>
+</html>
