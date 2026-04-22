@@ -51,11 +51,11 @@ python app.py
 http://127.0.0.1:5000
 ```
 
-📌 Future Improvements
-Add PSNR / SSIM evaluation metrics
-Deploy on cloud platforms (Render / Railway)
-Improve UI/UX
-Support batch processing
+## 📌 Future Improvements
+- Add PSNR / SSIM evaluation metrics
+- Deploy on cloud platforms (Render / Railway)
+- Improve UI/UX
+- Support batch processing
 
 ## 👨‍💻 Author
 
