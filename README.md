@@ -40,13 +40,13 @@ templates/   # Frontend UI
 app.py       # Flask backend
 ```
 ▶️ Run Locally
-# Install dependencies
+## Install dependencies
 pip install -r requirements.txt
 
-# Run the Flask app
+## Run the Flask app
 python app.py
 
-# Open in your browser:
+## Open in your browser:
 ```
 http://127.0.0.1:5000
 ```
@@ -57,6 +57,6 @@ Deploy on cloud platforms (Render / Railway)
 Improve UI/UX
 Support batch processing
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Priyansh Singhal
